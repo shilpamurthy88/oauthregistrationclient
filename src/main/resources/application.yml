@@ -22,7 +22,7 @@ spring:
             token-uri: http://localhost:8081/oauth/token
       resource:
         server:
-          url: http://localhost:8083/users
+          url: http://localhost:8082/users
   profiles:
     active: dev
 
