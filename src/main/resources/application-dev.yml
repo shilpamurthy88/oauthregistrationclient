@@ -35,10 +35,10 @@ spring:
             authorization-grant-type: password
         provider:
           authProvider:
-            token-uri: http://localhost:8081/oauth/token
+            token-uri: http://34.133.128.223:80/oauth/token
       resource:
         server:
-          url: http://localhost:8082/users
+          url: http://34.28.252.10:80/users
 
 server:
   port: 8083

@@ -71,7 +71,7 @@ public class AppController {
 		try {
 			listUsers = this.webClient
 					.get()
-					.uri("http://localhost:8083/users")
+					.uri("http://34.28.252.10:80/users")
 					.retrieve()
 					.bodyToMono(List.class)
 					.block();
@@ -90,7 +90,7 @@ public class AppController {
 
 		List<User>	listUsers = this.webClient
 					.get()
-					.uri("http://localhost:8082/users")
+					.uri("http://34.28.252.10:80/users")
 					.retrieve()
 					.bodyToMono(List.class)
 					.block();
