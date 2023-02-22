@@ -1,0 +1,32 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://localhost:3306/shilpa
+    username: root
+    password: MySql@12345
+    properties:
+      hibernate:
+        format_sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          authProvider:
+            client-id: shilpa
+            client-secret: shilpa@sh
+            authorization-grant-type: password
+        provider:
+          authProvider:
+            token-uri: http://localhost:8081/oauth/token
+      resource:
+        server:
+          url: http://localhost:8083/users
+  profiles:
+    active: dev
+
+server:
+  port: 8083
+
+
