@@ -22,18 +22,18 @@ public class WebClientConfiguration {
     public OAuth2AuthorizedClientManager authorizedClientManager(ClientRegistrationRepository clientRegistrationRepository,
                                                                  OAuth2AuthorizedClientService authorizedClientService) {
         OAuth2AuthorizedClientProvider authorizedClientProvider = OAuth2AuthorizedClientProviderBuilder.builder()
-                .password()
+                .clientCredentials()
                 .build();
 
         AuthorizedClientServiceOAuth2AuthorizedClientManager authorizedClientManager =
                 new AuthorizedClientServiceOAuth2AuthorizedClientManager(clientRegistrationRepository, authorizedClientService);
         authorizedClientManager.setAuthorizedClientProvider(authorizedClientProvider);
 
-        Map<String, Object> passwordAttributes = new HashMap<>();
+        /*Map<String, Object> passwordAttributes = new HashMap<>();
         passwordAttributes.put(OAuth2AuthorizationContext.USERNAME_ATTRIBUTE_NAME, "shilpa10@gmail.com");
         passwordAttributes.put(OAuth2AuthorizationContext.PASSWORD_ATTRIBUTE_NAME, "Shi10@123");
 
-        authorizedClientManager.setContextAttributesMapper(request -> passwordAttributes);
+        authorizedClientManager.setContextAttributesMapper(request -> passwordAttributes);*/
 
         return authorizedClientManager;
     }
