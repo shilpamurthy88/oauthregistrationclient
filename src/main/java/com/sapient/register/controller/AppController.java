@@ -68,7 +68,7 @@ public class AppController {
 
 		String returnValue = null;
 		List<User> listUsers = null;
-		try {
+		//try {
 			listUsers = this.webClient
 					.get()
 					.uri("http://34.28.252.10:80/users")
@@ -76,9 +76,9 @@ public class AppController {
 					.bodyToMono(List.class)
 					.block();
 			returnValue = "users";
-		} catch(Exception e) {
+		/*} catch(Exception e) {
 			returnValue = "autherror";
-		}
+		}*/
 		model.addAttribute("listUsers", listUsers);
 
 		return returnValue;
