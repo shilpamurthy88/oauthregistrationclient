@@ -36,11 +36,11 @@ spring:
         provider:
           authProvider:
             #token-uri: http://34.133.128.223:80/oauth/token
-            token-uri: http://authorizationserver-app.default.svc.cluster.local:8081/oauth/token
+            token-uri: http://authorizationserver-app.default.svc.cluster.local/oauth/token
       resource:
         server:
           #url: http://34.28.252.10:80/users
-          url: http://resourceserver-app.default.svc.cluster.local:8082/users
+          url: http://resourceserver-app.default.svc.cluster.local/users
 
 server:
   port: 8083
