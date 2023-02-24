@@ -40,7 +40,7 @@ spring:
       resource:
         server:
           #url: http://34.28.252.10:80/users
-          url: http://resourceserver-app.default.svc.cluster.local/users
+          url: http://resourceserver-app1.default.svc.cluster.local/users
 
 server:
   port: 8083
