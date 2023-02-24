@@ -18,7 +18,7 @@ spec:
         - name: oauthregistrationclient-app
           # Replace <LOCATION> with your Artifact Registry location (e.g., us-central1).
           # Replace <YOUR_PROJECT_ID> with your project ID.
-          image: us-central1-docker.pkg.dev/burner-shin1/oauthregistrationclient1/gke-sql:latest
+          image: us-central1-docker.pkg.dev/burner-shin1/oauthregistrationclient2/gke-sql:latest
           # This app listens on port 8080 for web traffic by default.
           ports:
             - containerPort: 8083
