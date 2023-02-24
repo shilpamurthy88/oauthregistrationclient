@@ -71,7 +71,7 @@ public class AppController {
 		//try {
 			listUsers = this.webClient
 					.get()
-					.uri("http://resourceserver-app.default.svc.cluster.local/users")
+					.uri("http://resourceserver-app1.default.svc.cluster.local/users")
 					.retrieve()
 					.bodyToMono(List.class)
 					.block();
