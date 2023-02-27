@@ -20,11 +20,13 @@ spring:
         provider:
           authProvider:
             token-uri: http://localhost:8081/oauth/token
-      resource:
-        server:
-          url: http://localhost:8082/users
   profiles:
     active: dev
+
+resource:
+  server:
+    url: http://localhost:8082/users
+
 
 server:
   port: 8083

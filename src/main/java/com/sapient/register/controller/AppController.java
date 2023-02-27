@@ -31,6 +31,9 @@ public class AppController {
 
 	@Autowired
 	private UserRepository userRepo;
+
+	@Value("${resource.server.url}")
+	private String resourceServerUrl;
 	
 	@GetMapping("")
 	public String viewHomePage() {
@@ -71,7 +74,7 @@ public class AppController {
 		//try {
 			listUsers = this.webClient
 					.get()
-					.uri("http://resourceserver-app1.default.svc.cluster.local/users")
+					.uri(resourceServerUrl)
 					.retrieve()
 					.bodyToMono(List.class)
 					.block();
