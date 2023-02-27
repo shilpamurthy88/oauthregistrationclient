@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: oauthregistrationclient-app
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: oauthregistrationclient-app
   ports:
