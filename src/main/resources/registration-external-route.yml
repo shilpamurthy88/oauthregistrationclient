@@ -11,5 +11,5 @@ spec:
     - "registration.example.com"
   rules:
     - backendRefs:
-        - name: registration-v1
-          port: 8080
+        - name: oauthregistrationclient
+          port: 8083
